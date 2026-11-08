@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="040fd976-d079-4ab6-ab87-13dc17e3a55e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/week2/week2.md" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/week2/week2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gdg/hongik/mission/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gdg/hongik/mission/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gdg/hongik/mission/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gdg/hongik/mission/ProductStore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gdg/hongik/mission/controller/ProductAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gdg/hongik/mission/controller/ProductAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gdg/hongik/mission/controller/ProductUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gdg/hongik/mission/controller/ProductUserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +80,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BackendApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "cys0515-cys",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jeon-yuha/Desktop/gdg-7th-be-mission",
     "node.js.detected.package.eslint": "true",
