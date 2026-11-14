@@ -6,6 +6,3 @@ public record StockRequest(
         int quantity
 ) {
 }
-
-
-//재고삭제는 ㄱㄷ

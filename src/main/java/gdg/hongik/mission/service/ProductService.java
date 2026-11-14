@@ -66,6 +66,7 @@ public class ProductService {
 
         Product savedProduct = productRepository.save(product);
 
+        //새 상품은 DB에 아직 없는 Entity이므로 save()
         return ProductResponse.from(savedProduct);
     }
 
@@ -81,10 +82,7 @@ public class ProductService {
 
         product.addStock(request.quantity());
 
-        // 아직 트랜잭션을 사용하지 않으므로 직접 저장
-        Product savedProduct = productRepository.save(product);
-
-        return ProductResponse.from(savedProduct);
+        return ProductResponse.from(product);
     }
 
     // 여러 상품 구매
@@ -131,15 +129,11 @@ public class ProductService {
 
             product.decreaseStock(quantity);
 
-            // 아직 트랜잭션을 사용하지 않으므로 직접 저장
-            Product savedProduct =
-                    productRepository.save(product);
-
             totalPrice +=
                     (long) product.getPrice() * quantity;
 
             purchasedProducts.add(
-                    ProductResponse.from(savedProduct));
+                    ProductResponse.from(product));
         }
 
         return new PurchaseResponse(
