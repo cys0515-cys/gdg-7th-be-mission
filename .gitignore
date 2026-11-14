@@ -1,0 +1,16 @@
+# Gradle & Build Output
+.gradle/
+build/
+out/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE & Editor
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
