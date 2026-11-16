@@ -1,13 +1,14 @@
 package gdg.hongik.mission.controller;
 
-import gdg.hongik.mission.dto.ProductResponse;
-import gdg.hongik.mission.dto.PurchaseRequest;
-import gdg.hongik.mission.dto.PurchaseResponse;
+import gdg.hongik.mission.dto.request.PurchaseItemRequest;
+import gdg.hongik.mission.dto.response.ProductResponse;
+import gdg.hongik.mission.dto.response.PurchaseResponse;
 import gdg.hongik.mission.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/products")
 public class ProductUserController {
@@ -19,19 +20,24 @@ public class ProductUserController {
 
         this.productService = productService;
     }
-
-    // 상품명 조회
+    // 전체 상품 조회
     @GetMapping
+    public List<ProductResponse> findAll() {
+        return productService.findAll();
+    }
+    // 상품명 단건 조회
+    @GetMapping(params = "itemName")
     public ProductResponse findByName(
-            @RequestParam("name") String name) {
+            @RequestParam("itemName")
+            String itemName) {
 
-        return productService.findByName(name);
+        return productService.findByName(itemName);
     }
 
     // 여러 상품 구매
     @PostMapping("/purchase")
     public PurchaseResponse purchase(
-            @RequestBody List<PurchaseRequest> request) {
+            @RequestBody List<PurchaseItemRequest> request) {
         return productService.purchase(request);
     }
 }
