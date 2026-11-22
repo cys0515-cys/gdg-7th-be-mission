@@ -5,6 +5,7 @@ import gdg.hongik.mission.dto.request.ProductDeleteRequest;
 import gdg.hongik.mission.dto.request.StockUpdateRequest;
 import gdg.hongik.mission.dto.response.ProductResponse;
 import gdg.hongik.mission.service.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +26,7 @@ public class ProductAdminController {
     // 상품 등록
     @PostMapping
     public ProductResponse register(
+            @Valid
             @RequestBody ProductCreateRequest request) {
 
         return productService.register(request);
@@ -33,6 +35,7 @@ public class ProductAdminController {
     // 재고 추가
     @PatchMapping("/stock")
     public ProductResponse addStock(
+            @Valid
             @RequestBody StockUpdateRequest request){
 
         return productService.addStock(request);
@@ -41,6 +44,7 @@ public class ProductAdminController {
     // 상품명으로 상품 삭제
     @DeleteMapping
     public List<ProductResponse> delete(
+            @Valid
             @RequestBody ProductDeleteRequest request) {
 
         return productService.delete(request);
